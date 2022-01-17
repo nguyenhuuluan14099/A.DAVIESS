@@ -38,12 +38,14 @@ function handleEvents(){
                 var iconCard  = Math.floor(Math.random() * 100) + 1;
                 console.log(iconCard);
                 if(iconCard <= 5){
+                    video.style.backgroundImage = "url('https://ak.picdn.net/shutterstock/videos/16761250/thumb/1.jpg?ip=x480')";
                     video.classList.add("show");
                     videoScreen.play();
                     //video events 
                         videoScreen.onended = function(){
                              setTimeout(function(){
                                 videoScreen.classList.add("stop");
+                                  video.style.backgroundImage = "url('./asset/images/icon.jpg')";
                                 btnNext.style.opacity = 1;
                         },500)                       
                        }
